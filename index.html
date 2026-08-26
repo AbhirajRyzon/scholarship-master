@@ -1,31 +1,978 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Scholarship Master — Class 8</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scholarship Master</title>
+
 <style>
-:root{--nav:#062b69;--blue:#176be7;--bg:#f5f8fc;--card:#fff;--ink:#152238;--muted:#6d788a;--line:#e2e8f1;--green:#18a66a;--purple:#7357e8;--orange:#f59b16}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px Arial,sans-serif}.side{position:fixed;inset:0 auto 0 0;width:235px;background:linear-gradient(#082f72,#05265d);color:#fff;padding:18px 13px}.brand{font-size:19px;font-weight:800;padding:8px 10px 22px}.brand span{color:#ffd42e}.nav button{width:100%;border:0;background:none;color:#dce8fb;text-align:left;padding:11px 12px;border-radius:10px;margin:2px 0;cursor:pointer}.nav button.active,.nav button:hover{background:#176be7;color:#fff;font-weight:700}.streak{background:#123e80;border-radius:12px;padding:14px;margin-top:25px}.streak b{display:block;font-size:25px;margin:4px 0}.main{margin-left:235px;padding:0 24px 30px}.top{height:76px;background:#fff;border-bottom:1px solid var(--line);margin:0 -24px 18px;padding:0 25px;display:flex;align-items:center;justify-content:space-between}.hello{font-size:22px;font-weight:800}.profile{display:flex;align-items:center;gap:12px}.avatar{width:37px;height:37px;border-radius:50%;display:grid;place-items:center;background:#176be7;color:#fff;font-weight:800}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.card{background:var(--card);border:1px solid var(--line);border-radius:13px;padding:14px;box-shadow:0 3px 12px #183a6b0a}.ico{width:35px;height:35px;border-radius:9px;display:grid;place-items:center;color:#fff;font-size:18px;margin-bottom:7px}.b{background:#176be7}.g{background:#18a66a}.p{background:#7357e8}.o{background:#f59b16}.muted{color:var(--muted)}.bar{height:6px;background:#e8edf4;border-radius:20px;margin-top:8px}.bar i{display:block;height:100%;background:#176be7;border-radius:20px}.layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:15px;margin-top:15px}.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}.title{background:linear-gradient(90deg,#176be7,#317ced);color:#fff;border-radius:10px;padding:11px 13px;font-weight:800;margin-bottom:10px;display:flex;justify-content:space-between}.cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px}.syll{border:1px solid var(--line);border-radius:10px;overflow:hidden}.syll h3{color:#fff;margin:0;padding:9px;font-size:14px}.mar h3{background:#18a66a}.int h3{background:#176be7}.math h3{background:#7357e8}.unit{padding:7px 9px;border-bottom:1px solid #edf0f5;font-size:11px}.unit b{display:flex;justify-content:space-between;color:#245094}.unit ul{margin:5px 0 0 16px;padding:0}.unit li{margin:2px 0}.right{display:flex;flex-direction:column;gap:12px}.robot{display:grid;grid-template-columns:105px 1fr;gap:9px}.bot{height:130px;border-radius:14px;background:linear-gradient(#eaf2ff,#fff);display:grid;place-items:center;font-size:76px}.bubble{padding:8px;border-radius:9px;background:#edf4ff;font-size:11px;margin-bottom:5px}.bubble.g{background:#ecfaf3}.bubble.o{background:#fff5e5}.ask{display:flex;gap:6px;margin-top:8px}.ask input{flex:1;min-width:0;padding:9px;border:1px solid var(--line);border-radius:8px}.ask button,.primary{border:0;border-radius:8px;background:#176be7;color:#fff;padding:9px 13px;font-weight:700;cursor:pointer}.plan li{list-style:none;padding:7px 0;border-bottom:1px solid #edf0f5}.donut{display:flex;align-items:center;gap:14px}.ring{width:100px;height:100px;border-radius:50%;background:conic-gradient(#18a66a 0 60%,#f59b16 60% 72%,#dfe4eb 72%);display:grid;place-items:center}.ring:after{content:'72%';width:70px;height:70px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:20px;font-weight:800}.actions{display:grid;grid-template-columns:1fr 1fr;gap:7px}.actions button{border:0;border-radius:8px;color:#fff;padding:10px;font-weight:700;cursor:pointer}.page{display:none}.page.active{display:block}.subjects{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.subject{cursor:pointer}.subject:hover{border-color:#176be7}.badge{float:right;background:#eef3ff;color:#176be7;padding:3px 7px;border-radius:20px;font-size:11px}.q{font-size:20px;font-weight:700;margin:22px 0}.opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}.opt{padding:13px;border:1px solid var(--line);border-radius:10px;background:#fff;text-align:left;cursor:pointer}.opt.correct{background:#eafaf3;border-color:#18a66a}.opt.wrong{background:#fff0f0;border-color:#ef5b5b}.feedback{display:none;margin-top:12px;padding:11px;background:#f5f7fa;border-radius:9px}.next{display:none;margin-top:12px}.chapters{display:grid;grid-template-columns:1fr 1fr;gap:10px}.chapter{border:1px solid var(--line);border-radius:10px;padding:11px}@media(max-width:1100px){.layout{grid-template-columns:1fr}.cols{grid-template-columns:1fr}.right{display:grid;grid-template-columns:1fr 1fr}.grid4{grid-template-columns:1fr 1fr}}@media(max-width:750px){.side{width:68px}.brand{font-size:0;text-align:center}.brand:first-letter{font-size:24px}.nav button{font-size:0;text-align:center}.nav button:first-letter{font-size:18px}.streak{display:none}.main{margin-left:68px}.right{display:block}.subjects{grid-template-columns:1fr}.chapters{grid-template-columns:1fr}}
-</style></head><body>
-<aside class="side"><div class="brand">🎓 SCHOLARSHIP <span>MASTER</span></div><nav class="nav"><button class="active" onclick="go('dash',this)">🏠 Dashboard</button><button onclick="go('subjects',this)">📚 Subjects</button><button onclick="go('practice',this)">🧠 Practice</button><button onclick="go('mock',this)">⏱️ Mock Test</button><button onclick="go('papers',this)">📄 Previous Papers</button><button onclick="go('progress',this)">📊 My Progress</button><button onclick="go('plan',this)">🗓️ Study Plan</button><button onclick="go('teacher',this)">🤖 AI Teacher</button><button onclick="go('achievements',this)">🏆 Achievements</button></nav><div class="streak">Study Streak 🔥<b>3 Days</b><small>Keep it up! You're doing great.</small></div></aside>
-<main class="main"><header class="top"><div><div class="hello">Good Morning, Student! 👋</div><div class="muted">Let's learn, practise and achieve your scholarship goal.</div></div><div class="profile"><select><option>English</option><option>मराठी</option></select> 🔔 <div class="avatar">S</div><b>Student</b></div></header>
-<section id="dash" class="page active"><div class="grid4"><div class="card"><div class="ico b">📖</div><span class="muted">Topics Completed</span><h2>16 / 84</h2><div class="bar"><i style="width:19%"></i></div></div><div class="card"><div class="ico g">🎯</div><span class="muted">Tests Completed</span><h2>4</h2><div class="bar"><i style="width:45%;background:#18a66a"></i></div></div><div class="card"><div class="ico p">🏆</div><span class="muted">Average Score</span><h2>78%</h2><div class="bar"><i style="width:78%;background:#7357e8"></i></div></div><div class="card"><div class="ico o">🔥</div><span class="muted">Current Streak</span><h2>3 Days</h2><div class="bar"><i style="width:58%;background:#f59b16"></i></div></div></div>
-<div class="layout"><div class="panel"><div class="title"><span>Your Exam Chapters (All Units)</span><small>84 topics</small></div><div class="cols">
-<div class="syll mar"><h3>Marathi (Third Language) · 25 Q</h3><div class="unit"><b>घटक 1 : आकलन <span>24%</span></b><ul><li>उतारा व त्यावर आधारित प्रश्न</li><li>कविता व कवितेवर आधारित प्रश्न</li><li>सुसंगत वाक्यांचा परिच्छेद</li><li>संवाद व त्यावर आधारित प्रश्न</li></ul></div><div class="unit"><b>घटक 2 : शब्दसंपत्ती <span>36%</span></b><ul><li>समानार्थी शब्द</li><li>विरुद्धार्थी शब्द</li><li>शुद्ध व अशुद्ध शब्द</li><li>शब्दसमूहाबद्दल एक शब्द</li><li>वाक्प्रचार · म्हणी · जोडशब्द</li><li>एकाच शब्दाचे भिन्न अर्थ</li></ul></div><div class="unit"><b>घटक 3 : कार्यात्मक व्याकरण <span>32%</span></b><ul><li>वर्णविचार · शब्दांच्या जाती · लिंग</li><li>वचन · विरामचिन्हे · काळ</li></ul></div><div class="unit"><b>घटक 4 : सामान्यज्ञान <span>8%</span></b><ul><li>साहित्य व साहित्यप्रकार</li><li>सामान्यज्ञान</li></ul></div></div>
-<div class="syll int"><h3>Intelligence Test · 50 Q</h3><div class="unit"><b>Unit 1: Comprehension <span>10%</span></b><ul><li>Instructions · Language · Letters</li></ul></div><div class="unit"><b>Unit 2: Classification <span>10%</span></b><ul><li>Words · Figures · Numbers · Letters</li></ul></div><div class="unit"><b>Unit 3: Analogy <span>10%</span></b><ul><li>Words · Figures · Numbers · Letters</li></ul></div><div class="unit"><b>Unit 4: Series <span>12%</span></b><ul><li>Numbers · Figures · Symbols · Wrong Term · Letters</li></ul></div><div class="unit"><b>Unit 5: Code <span>6%</span></b><ul><li>Digits/letters/symbols coding</li></ul></div><div class="unit"><b>Unit 6: Rhythmic Arrangement <span>6%</span></b></div><div class="unit"><b>Unit 7: Pyramid <span>6%</span></b></div><div class="unit"><b>Unit 8: Reflections / Images <span>6%</span></b></div><div class="unit"><b>Unit 9: Logical Reasoning <span>12%</span></b><ul><li>Verbal · Non-verbal</li></ul></div><div class="unit"><b>Unit 10: Puzzles <span>12%</span></b><ul><li>Queue · Directions · Calendar · Venn diagrams · Mathematical Puzzles</li></ul></div><div class="unit"><b>Unit 11: Figure Analysis <span>10%</span></b><ul><li>Figure Completion · Folded · Hidden · Identical Figures</li></ul></div><div class="unit"><b>Unit 12: Miscellaneous</b></div></div>
-<div class="syll math"><h3>Mathematics · 50 Q</h3><div class="unit"><b>Unit 1: Number Work <span>6%</span></b><ul><li>Natural/Whole/Integers</li><li>Fractions · Mixed Fractions · Decimals</li><li>Even/Odd/Prime/Twin/Composite</li><li>Operations on Numbers</li></ul></div><div class="unit"><b>Unit 2: Operations on Numbers <span>14%</span></b><ul><li>HCF & LCM · Squares/Cubes & Roots</li><li>Factors & Multiples · Indices</li></ul></div><div class="unit"><b>Unit 3: Geometry <span>20%</span></b><ul><li>Point/Segment/Line/Ray/Plane/Angle</li><li>Parallel Lines & Transversal</li><li>Circle · Triangle · Pythagoras</li><li>Quadrilateral & Properties</li></ul></div><div class="unit"><b>Unit 4: Mensuration <span>20%</span></b><ul><li>Metric Measures · Perimeter · Area</li><li>Surface Area & Volume</li></ul></div><div class="unit"><b>Unit 5: Statistics <span>6%</span></b><ul><li>Mean · Bar Graph · Pie Diagram</li></ul></div><div class="unit"><b>Unit 6: Applied Mathematics <span>16%</span></b><ul><li>Percentage · Simple/Compound Interest</li><li>Profit & Loss · Discount/Rebate/Commission</li></ul></div><div class="unit"><b>Unit 7: Algebra <span>18%</span></b><ul><li>Algebraic Expressions · Identities</li><li>Equations in One Variable · Polynomials</li></ul></div></div></div></div>
-<div class="right"><div class="panel"><h3 style="color:#176be7;margin:2px 0 8px">Meet Your AI Teacher</h3><div class="robot"><div class="bot">🤖</div><div><div class="bubble">📖 I can explain any topic.</div><div class="bubble g">✏️ I can give practice questions.</div><div class="bubble o">📊 I can find weak topics.</div><div class="bubble">❓ Ask me anything!</div></div></div><div class="ask"><input id="ask" placeholder="Type your question..."><button onclick="ask()">Ask</button></div><div id="reply" class="muted" style="margin-top:7px"></div></div><div class="panel"><h3 style="color:#18a66a;margin:2px 0">Today's Study Plan</h3><div class="plan"><li>◯ Marathi — शब्दसंपत्ती</li><li>◯ Maths — Geometry</li><li>◯ Intelligence — Analogy</li><li>◯ Mixed Mock — 25 Questions</li></div></div><div class="panel"><h3 style="color:#176be7;margin:2px 0 10px">Your Progress</h3><div class="donut"><div class="ring"></div><div><p>🟢 Completed 60%</p><p>🟠 In Progress 12%</p><p>⚪ Not Started 28%</p></div></div></div><div class="panel"><h3 style="color:#176be7;margin:2px 0 9px">Quick Actions</h3><div class="actions"><button style="background:#18a66a" onclick="start('Marathi')">✏️ Practice</button><button style="background:#7357e8" onclick="go('mock')">⏱ Mock</button><button style="background:#176be7" onclick="go('papers')">📄 Papers</button><button style="background:#f59b16" onclick="go('progress')">📊 Analytics</button></div></div></div></div></section>
-<section id="subjects" class="page"><div class="panel"><div class="title">Subjects & Chapter Map</div><div class="subjects"><div class="card subject" onclick="start('Mathematics')"><div class="ico p">➗</div><h3>Mathematics <span class="badge">7 Units</span></h3><p class="muted">Number Work · Geometry · Mensuration · Statistics · Applied Mathematics · Algebra</p></div><div class="card subject" onclick="start('Marathi')"><div class="ico g">अ</div><h3>Marathi <span class="badge">4 Units</span></h3><p class="muted">आकलन · शब्दसंपत्ती · व्याकरण · सामान्यज्ञान</p></div><div class="card subject" onclick="start('Intelligence')"><div class="ico b">🧩</div><h3>Intelligence Test <span class="badge">12 Units</span></h3><p class="muted">Comprehension · Classification · Analogy · Series · Code · Reasoning · Puzzles</p></div></div></div></section>
-<section id="practice" class="page"><div class="panel"><div class="title"><span id="ps">Mathematics</span><span id="qc">Question 1</span></div><div class="q" id="q"></div><div class="opts" id="opts"></div><div class="feedback" id="fb"></div><button class="primary next" id="next" onclick="nextQ()">Next Question →</button></div></section>
-<section id="mock" class="page"><div class="panel"><div class="title">Mock Test Center</div><h2>Scholarship Mixed Mock Test</h2><p class="muted">25 questions · 50 marks · timed practice using your chapter list.</p><button class="primary" onclick="start('Mixed')">Start Mock Test →</button></div></section>
-<section id="papers" class="page"><div class="panel"><div class="title">Previous Papers</div><div class="chapters"><div class="chapter"><b>State Council Question Paper — 2025</b><p class="muted">Paper 1: English (First Language) and Mathematics</p><button class="primary">Open Paper</button></div><div class="chapter"><b>State Council Question Paper — 2025</b><p class="muted">Paper 2: Marathi (Third Language) and Intelligence Test</p><button class="primary">Open Paper</button></div></div></div></section>
-<section id="progress" class="page"><div class="panel"><div class="title">My Progress</div><div class="grid4"><div class="card"><h2 id="answered">0</h2><span class="muted">Answered</span></div><div class="card"><h2 id="correct">0</h2><span class="muted">Correct</span></div><div class="card"><h2 id="accuracy">0%</h2><span class="muted">Accuracy</span></div><div class="card"><h2>3 🔥</h2><span class="muted">Day Streak</span></div></div><br><div class="chapter"><b>Recommended revision</b><p class="muted">Fractions · Geometry · Marathi शब्दसंपत्ती · Analogy · Series</p></div></div></section>
-<section id="plan" class="page"><div class="panel"><div class="title">Today's Study Plan</div><div class="chapters"><div class="chapter"><b>20 min — Marathi</b><p>शब्दसंपत्ती</p><button class="primary" onclick="start('Marathi')">Practice</button></div><div class="chapter"><b>25 min — Mathematics</b><p>Geometry</p><button class="primary" onclick="start('Mathematics')">Practice</button></div><div class="chapter"><b>20 min — Intelligence</b><p>Analogy & Series</p><button class="primary" onclick="start('Intelligence')">Practice</button></div><div class="chapter"><b>25 min — Mixed</b><p>Mock Test</p><button class="primary" onclick="go('mock')">Take Test</button></div></div></div></section>
-<section id="teacher" class="page"><div class="panel"><div class="title">🤖 AI Teacher</div><h2>Your Personal Scholarship Teacher</h2><p class="muted">Ask for a simple explanation, example, quiz, or revision plan.</p><div class="ask"><input id="ask2" placeholder="Example: Explain Pythagoras theorem simply"><button onclick="ask2()">Ask</button></div><div id="r2" class="chapter" style="margin-top:12px">👋 Hello! Ask me about any chapter in your syllabus.</div></div></section>
-<section id="achievements" class="page"><div class="panel"><div class="title">Achievements</div><div class="subjects"><div class="card"><h3>🔥 3-Day Streak</h3><p class="muted">Studied for 3 consecutive days.</p></div><div class="card"><h3>🎯 First Test</h3><p class="muted">Completed your first practice test.</p></div><div class="card"><h3>🧠 Thinker</h3><p class="muted">Practice 25 intelligence questions to unlock.</p></div></div></div></section>
+:root{
+  --nav:#061a35;
+  --blue:#176be7;
+  --bg:#f5f8fc;
+  --card:#ffffff;
+  --ink:#152238;
+  --muted:#667788;
+  --line:#e2e8f1;
+  --green:#18a66a;
+  --purple:#7357e8;
+  --orange:#f07832;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+}
+
+.app{
+  display:flex;
+  min-height:100vh;
+}
+
+.sidebar{
+  width:230px;
+  background:var(--nav);
+  color:white;
+  padding:22px 14px;
+  position:fixed;
+  left:0;
+  top:0;
+  bottom:0;
+}
+
+.brand{
+  font-size:20px;
+  font-weight:800;
+  letter-spacing:.5px;
+  padding:8px 12px 25px;
+}
+
+.brand span{color:#39a7ff}
+
+.nav button{
+  width:100%;
+  border:0;
+  background:transparent;
+  color:#dce7f5;
+  padding:13px 14px;
+  margin:3px 0;
+  border-radius:9px;
+  text-align:left;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.nav button:hover,
+.nav button.active{
+  background:#176be7;
+  color:white;
+}
+
+.main{
+  margin-left:230px;
+  width:calc(100% - 230px);
+  padding:28px;
+}
+
+.top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:24px;
+}
+
+.hello h1{
+  margin:0 0 5px;
+  font-size:25px;
+}
+
+.hello p{
+  margin:0;
+  color:var(--muted);
+}
+
+.top-right{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+select{
+  padding:8px 12px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:white;
+}
+
+.avatar{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:#176be7;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+}
+
+.page{display:none}
+.page.active{display:block}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+  margin-bottom:20px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:18px;
+  box-shadow:0 2px 8px rgba(20,40,70,.04);
+}
+
+.stat-title{
+  color:var(--muted);
+  font-size:13px;
+  margin-bottom:14px;
+}
+
+.stat-number{
+  font-size:24px;
+  font-weight:800;
+}
+
+.progress{
+  height:7px;
+  background:#edf1f6;
+  border-radius:20px;
+  margin-top:12px;
+  overflow:hidden;
+}
+
+.progress div{
+  height:100%;
+  background:var(--blue);
+  border-radius:20px;
+}
+
+.dashboard-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr;
+  gap:18px;
+}
+
+.section-title{
+  font-size:18px;
+  font-weight:800;
+  margin-bottom:15px;
+}
+
+.subjects{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.subject{
+  padding:16px;
+  border-radius:12px;
+  color:white;
+  min-height:120px;
+}
+
+.subject h3{
+  margin:0 0 8px;
+  font-size:15px;
+}
+
+.subject p{
+  margin:4px 0;
+  font-size:12px;
+  opacity:.9;
+}
+
+.math{background:#7357e8}
+.intel{background:#3974e8}
+.eng{background:#18a66a}
+
+.ai-box{
+  min-height:280px;
+}
+
+.ai-icon{
+  font-size:48px;
+  text-align:center;
+  margin:15px;
+}
+
+.ai-box input{
+  width:100%;
+  padding:11px;
+  border:1px solid var(--line);
+  border-radius:8px;
+}
+
+.btn{
+  border:0;
+  border-radius:8px;
+  padding:10px 16px;
+  cursor:pointer;
+  background:var(--blue);
+  color:white;
+  font-weight:bold;
+}
+
+.btn.secondary{
+  background:#eef4ff;
+  color:var(--blue);
+}
+
+.page-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+
+.page-header h2{
+  margin:0;
+}
+
+.search{
+  width:300px;
+  padding:11px 14px;
+  border:1px solid var(--line);
+  border-radius:9px;
+}
+
+.unit{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:14px;
+  margin-bottom:18px;
+  overflow:hidden;
+}
+
+.unit-head{
+  padding:17px 20px;
+  color:white;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.unit-head h3{
+  margin:0;
+  font-size:17px;
+}
+
+.unit-head span{
+  font-size:13px;
+}
+
+.unit1{background:#18a66a}
+.unit2{background:#f07832}
+.unit3{background:#176be7}
+.unit4{background:#7357e8}
+.unit5{background:#d95772}
+
+.topic{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:13px 18px;
+  border-top:1px solid var(--line);
+}
+
+.topic input{
+  width:18px;
+  height:18px;
+  cursor:pointer;
+}
+
+.topic-name{
+  flex:1;
+  font-size:14px;
+}
+
+.topic-page{
+  color:var(--muted);
+  font-size:12px;
+}
+
+.topic.done .topic-name{
+  text-decoration:line-through;
+  color:#8995a5;
+}
+
+.unit-progress{
+  font-size:12px;
+  opacity:.9;
+}
+
+.info{
+  background:#eef5ff;
+  border-left:4px solid var(--blue);
+  padding:14px;
+  margin-bottom:20px;
+  border-radius:8px;
+  font-size:14px;
+  line-height:1.5;
+}
+
+.placeholder{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:40px;
+  text-align:center;
+}
+
+.placeholder h2{margin-top:0}
+
+@media(max-width:900px){
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .dashboard-grid{grid-template-columns:1fr}
+  .subjects{grid-template-columns:1fr}
+}
+
+@media(max-width:650px){
+  .sidebar{
+    width:70px;
+    padding:12px 7px;
+  }
+
+  .brand{
+    font-size:0;
+    text-align:center;
+  }
+
+  .brand:first-letter{
+    font-size:22px;
+  }
+
+  .nav button{
+    font-size:0;
+    text-align:center;
+  }
+
+  .nav button::first-letter{
+    font-size:18px;
+  }
+
+  .main{
+    margin-left:70px;
+    width:calc(100% - 70px);
+    padding:15px;
+  }
+
+  .top{
+    align-items:flex-start;
+  }
+
+  .stats{grid-template-columns:1fr}
+
+  .search{
+    width:180px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+<aside class="sidebar">
+
+  <div class="brand">
+    SCHOLARSHIP <span>MASTER</span>
+  </div>
+
+  <nav class="nav">
+    <button class="active" onclick="showPage('dashboard',this)">🏠 Dashboard</button>
+    <button onclick="showPage('syllabus',this)">📚 Syllabus</button>
+    <button onclick="showPage('mock',this)">📝 Mock Test</button>
+    <button onclick="showPage('practice',this)">📖 Practice Papers</button>
+    <button onclick="showPage('progress',this)">📊 My Progress</button>
+    <button onclick="showPage('plan',this)">🗓️ Study Plan</button>
+    <button onclick="showPage('teacher',this)">🤖 AI Teacher</button>
+    <button onclick="showPage('achievements',this)">🏆 Achievements</button>
+  </nav>
+
+</aside>
+
+<main class="main">
+
+<header class="top">
+  <div class="hello">
+    <h1>Good Morning, Student 👋</h1>
+    <p>Let's learn, practise and achieve your scholarship goal.</p>
+  </div>
+
+  <div class="top-right">
+    <select>
+      <option>English</option>
+    </select>
+    <span>🔔</span>
+    <div class="avatar">S</div>
+  </div>
+</header>
+
+<!-- DASHBOARD -->
+
+<section id="dashboard" class="page active">
+
+  <div class="stats">
+
+    <div class="card">
+      <div class="stat-title">Topics Completed</div>
+      <div class="stat-number" id="topicCount">0 / 26</div>
+      <div class="progress">
+        <div id="topicBar" style="width:0%"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="stat-title">Tests Completed</div>
+      <div class="stat-number">0</div>
+      <div class="progress">
+        <div style="width:0%;background:#18a66a"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="stat-title">Average Score</div>
+      <div class="stat-number">—</div>
+      <div class="progress">
+        <div style="width:0%;background:#7357e8"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="stat-title">Current Streak</div>
+      <div class="stat-number">0 Days</div>
+      <div class="progress">
+        <div style="width:0%;background:#f07832"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="dashboard-grid">
+
+    <div class="card">
+      <div class="section-title">
+        Your Exam Chapters
+      </div>
+
+      <div class="subjects">
+
+        <div class="subject eng">
+          <h3>English</h3>
+          <p>5 Units</p>
+          <p>26 Topics</p>
+        </div>
+
+        <div class="subject intel">
+          <h3>Intelligence Test</h3>
+          <p>50 Questions</p>
+          <p>Practice & Reasoning</p>
+        </div>
+
+        <div class="subject math">
+          <h3>Mathematics</h3>
+          <p>50 Questions</p>
+          <p>Number Work & Reasoning</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="card ai-box">
+      <div class="section-title">Meet Your AI Teacher</div>
+      <div class="ai-icon">🤖</div>
+      <p>Ask questions, get explanations and practise difficult topics.</p>
+      <input placeholder="Type your question...">
+      <br><br>
+      <button class="btn">Ask</button>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SYLLABUS -->
+
+<section id="syllabus" class="page">
+
+  <div class="page-header">
+    <div>
+      <h2>English Syllabus</h2>
+      <p style="color:#667788;margin-top:6px">
+        Class 8 Scholarship Examination • English
+      </p>
+    </div>
+
+    <input
+      class="search"
+      id="syllabusSearch"
+      placeholder="Search a topic..."
+      oninput="searchTopics()"
+    >
+  </div>
+
+  <div class="info">
+    <strong>How to use this section:</strong>
+    Study one topic at a time. Tick the box when you have completed
+    that topic. Your dashboard progress will update automatically.
+  </div>
+
+
+  <!-- UNIT 1 -->
+
+  <div class="unit">
+
+    <div class="unit-head unit1">
+      <h3>Unit 1 • Vocabulary</h3>
+      <span class="unit-progress" id="u1progress">0 / 8</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="1">
+      <span class="topic-name">Synonyms (Similar Meanings)</span>
+      <span class="topic-page">p. 9</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="1">
+      <span class="topic-name">Find Out the Words Which Mean...</span>
+      <span class="topic-page">p. 12</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="1">
+      <span class="topic-name">Antonyms (Opposites)</span>
+      <span class="topic-page">p. 16</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="1">
+      <span class="topic-name">Formation of Words (Word Building)</span>
+      <span class="topic-page">p. 20</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="1">
+      <span class="topic-name">Phrases – Phrasal Verbs and Noun Phrases</span>
+      <span class="topic-page">p. 24</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="1">
+      <span class="topic-name">Contextual Meaning of Words</span>
+      <span class="topic-page">p. 27</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="1">
+      <span class="topic-name">Forming Words Using Given Clues</span>
+      <span class="topic-page">p. 30</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="1">
+      <span class="topic-name">Abbreviations</span>
+      <span class="topic-page">p. 32</span>
+    </div>
+
+  </div>
+
+
+  <!-- UNIT 2 -->
+
+  <div class="unit">
+
+    <div class="unit-head unit2">
+      <h3>Unit 2 • Word Puzzles and Riddles</h3>
+      <span class="unit-progress" id="u2progress">0 / 6</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="2">
+      <span class="topic-name">Crossword Puzzles</span>
+      <span class="topic-page">p. 37</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="2">
+      <span class="topic-name">Riddles</span>
+      <span class="topic-page">p. 40</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="2">
+      <span class="topic-name">Word Ladders</span>
+      <span class="topic-page">p. 42</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="2">
+      <span class="topic-name">Word Web</span>
+      <span class="topic-page">p. 44</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="2">
+      <span class="topic-name">Word Register</span>
+      <span class="topic-page">p. 48</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="2">
+      <span class="topic-name">Grid</span>
+      <span class="topic-page">p. 50</span>
+    </div>
+
+  </div>
+
+
+  <!-- UNIT 3 -->
+
+  <div class="unit">
+
+    <div class="unit-head unit3">
+      <h3>Unit 3 • Language Study</h3>
+      <span class="unit-progress" id="u3progress">0 / 7</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="3">
+      <span class="topic-name">Parts of Speech</span>
+      <span class="topic-page">p. 54</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="3">
+      <span class="topic-name">Tenses</span>
+      <span class="topic-page">p. 57</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="3">
+      <span class="topic-name">Modal Auxiliaries</span>
+      <span class="topic-page">p. 61</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="3">
+      <span class="topic-name">Clauses</span>
+      <span class="topic-page">p. 64</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="3">
+      <span class="topic-name">Types of Sentences – Simple, Compound, Complex</span>
+      <span class="topic-page">p. 69</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="3">
+      <span class="topic-name">Figures of Speech</span>
+      <span class="topic-page">p. 72</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="3">
+      <span class="topic-name">Synthesis</span>
+      <span class="topic-page">p. 75</span>
+    </div>
+
+  </div>
+
+
+  <!-- UNIT 4 -->
+
+  <div class="unit">
+
+    <div class="unit-head unit4">
+      <h3>Unit 4 • Grammar</h3>
+      <span class="unit-progress" id="u4progress">0 / 6</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="4">
+      <span class="topic-name">Voice – Active and Passive</span>
+      <span class="topic-page">p. 81</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="4">
+      <span class="topic-name">Direct and Indirect Speech</span>
+      <span class="topic-page">p. 85</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="4">
+      <span class="topic-name">Degrees of Comparison</span>
+      <span class="topic-page">p. 89</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="4">
+      <span class="topic-name">Correlative Conjunctions</span>
+      <span class="topic-page">p. 92</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="4">
+      <span class="topic-name">Compound Conjunctions</span>
+      <span class="topic-page">p. 99</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="4">
+      <span class="topic-name">Wh-Questions</span>
+      <span class="topic-page">p. 101</span>
+    </div>
+
+  </div>
+
+
+  <!-- UNIT 5 -->
+
+  <div class="unit">
+
+    <div class="unit-head unit5">
+      <h3>Unit 5 • Creative Writing</h3>
+      <span class="unit-progress" id="u5progress">0 / 2</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="5">
+      <span class="topic-name">News</span>
+      <span class="topic-page">p. 104</span>
+    </div>
+
+    <div class="topic">
+      <input type="checkbox" data-unit="5">
+      <span class="topic-name">SMS</span>
+      <span class="topic-page">p. 107</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PLACEHOLDER MODULES -->
+
+<section id="mock" class="page">
+  <div class="placeholder">
+    <h2>📝 Mock Test Center</h2>
+    <p>The real timed scholarship mock tests will be built next.</p>
+    <button class="btn" onclick="showPage('syllabus',document.querySelectorAll('.nav button')[1])">
+      Study Syllabus First
+    </button>
+  </div>
+</section>
+
+<section id="practice" class="page">
+  <div class="placeholder">
+    <h2>📖 Practice Papers</h2>
+    <p>Topic-wise practice questions will be added here.</p>
+  </div>
+</section>
+
+<section id="progress" class="page">
+  <div class="placeholder">
+    <h2>📊 My Progress</h2>
+    <p>Your syllabus completion is already being tracked.</p>
+    <div class="progress" style="max-width:500px;margin:20px auto">
+      <div id="progressPageBar" style="width:0%"></div>
+    </div>
+    <h2 id="progressPageText">0%</h2>
+  </div>
+</section>
+
+<section id="plan" class="page">
+  <div class="placeholder">
+    <h2>🗓️ Study Plan</h2>
+    <p>Your personalised daily study planner will be added here.</p>
+  </div>
+</section>
+
+<section id="teacher" class="page">
+  <div class="placeholder">
+    <h2>🤖 AI Teacher</h2>
+    <p>The AI Teacher will answer questions and explain difficult topics.</p>
+  </div>
+</section>
+
+<section id="achievements" class="page">
+  <div class="placeholder">
+    <h2>🏆 Achievements</h2>
+    <p>Badges and milestones will appear here as you study.</p>
+  </div>
+</section>
+
 </main>
+</div>
+
+
 <script>
-const qs={Mathematics:[['If 3/5 of a number is 24, what is the number?',['30','36','40','45'],2,'24 × 5 ÷ 3 = 40.'],['A triangle has angles 50° and 60°. What is the third angle?',['60°','70°','80°','90°'],1,'180 − 50 − 60 = 70°.'],['What is 25% of 240?',['40','50','60','80'],2,'25% is one-fourth, so 240 ÷ 4 = 60.']],Marathi:[['“आनंद” या शब्दाचा समानार्थी शब्द कोणता?',['दुःख','हर्ष','राग','भीती'],1,'आनंद = हर्ष.'],['“मोठा” या शब्दाचा विरुद्धार्थी शब्द कोणता?',['लहान','उंच','जाड','लांब'],0,'मोठा ↔ लहान.'],['योग्य शब्द निवडा.',['आशिर्वाद','आशीर्वाद','आशिरवाद','आशीर्वाद्द'],1,'योग्य शब्द: आशीर्वाद.']],Intelligence:[['Find the next number: 2, 6, 12, 20, 30, ?',['36','40','42','44'],2,'Differences are 4, 6, 8, 10, then 12. Answer 42.'],['Book : Reading :: Food : ?',['Cooking','Eating','Buying','Serving'],1,'A book is associated with reading; food with eating.'],['Which is the odd one out?',['Triangle','Square','Circle','Rectangle'],2,'Circle has no straight sides; the others are polygons.']],Mixed:[['What is 7 × 8?',['54','56','58','64'],1,'7 × 8 = 56.'],['“जलद” is closest in meaning to:',['हळू','वेगवान','शांत','मोठा'],1,'जलद = वेगवान.'],['3, 6, 12, 24, ?',['36','42','48','54'],2,'Each term is multiplied by 2.']]};let sub='Mathematics',qi=0,ans=0,cor=0;
-function go(id,btn){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.nav button').forEach(x=>x.classList.remove('active'));if(btn)btn.classList.add('active');if(id==='practice')render()}
-function start(s){sub=s;qi=0;go('practice');render()}
-function render(){let a=qs[sub]||qs.Mixed,x=a[qi%a.length];document.getElementById('ps').textContent=sub+' Practice';document.getElementById('qc').textContent='Question '+(qi+1);document.getElementById('q').textContent=x[0];let box=document.getElementById('opts');box.innerHTML='';document.getElementById('fb').style.display='none';document.getElementById('next').style.display='none';x[1].forEach((t,i)=>{let b=document.createElement('button');b.className='opt';b.textContent=String.fromCharCode(65+i)+'. '+t;b.onclick=()=>answer(i,x,box);box.appendChild(b)})}
-function answer(i,x,box){if([...box.children].some(b=>b.disabled))return;[...box.children].forEach(b=>b.disabled=true);ans++;if(i===x[2]){cor++;box.children[i].classList.add('correct');document.getElementById('fb').innerHTML='<b>✅ Correct!</b><br>'+x[3]}else{box.children[i].classList.add('wrong');box.children[x[2]].classList.add('correct');document.getElementById('fb').innerHTML='<b>❌ Not quite.</b><br>'+x[3]}document.getElementById('fb').style.display='block';document.getElementById('next').style.display='inline-block';stats()}
-function nextQ(){qi++;render()}function stats(){document.getElementById('answered').textContent=ans;document.getElementById('correct').textContent=cor;document.getElementById('accuracy').textContent=(ans?Math.round(cor/ans*100):0)+'%';localStorage.setItem('sm',JSON.stringify({ans,cor}))}
-function ask(){let v=document.getElementById('ask').value.trim();if(v)document.getElementById('reply').textContent='🤖 Teacher: I will break “'+v+'” into a simple explanation, an example, and practice questions.'}function ask2(){let v=document.getElementById('ask2').value.trim();if(v)document.getElementById('r2').innerHTML='<b>🤖 Teacher:</b> Great question about “'+v+'”. I’ll explain it step-by-step, then test you with scholarship-style questions.'}
-try{let s=JSON.parse(localStorage.getItem('sm'));if(s){ans=s.ans||0;cor=s.cor||0;stats()}}catch(e){}render();
-</script></body></html>
+
+const TOTAL_TOPICS = 29;
+
+function showPage(id,button){
+
+  document.querySelectorAll('.page').forEach(page=>{
+    page.classList.remove('active');
+  });
+
+  document.getElementById(id).classList.add('active');
+
+  document.querySelectorAll('.nav button').forEach(btn=>{
+    btn.classList.remove('active');
+  });
+
+  if(button) button.classList.add('active');
+}
+
+
+function saveProgress(){
+
+  const boxes=document.querySelectorAll('.topic input');
+
+  const state=[];
+
+  boxes.forEach((box,index)=>{
+    state[index]=box.checked;
+  });
+
+  localStorage.setItem(
+    'scholarshipEnglishProgress',
+    JSON.stringify(state)
+  );
+}
+
+
+function loadProgress(){
+
+  const saved=localStorage.getItem(
+    'scholarshipEnglishProgress'
+  );
+
+  if(!saved) return;
+
+  const state=JSON.parse(saved);
+
+  document.querySelectorAll('.topic input')
+    .forEach((box,index)=>{
+      box.checked=!!state[index];
+    });
+}
+
+
+function updateProgress(){
+
+  const boxes=document.querySelectorAll('.topic input');
+
+  let completed=0;
+
+  boxes.forEach(box=>{
+    if(box.checked){
+      completed++;
+
+      box.closest('.topic')
+        .classList.add('done');
+    }else{
+      box.closest('.topic')
+        .classList.remove('done');
+    }
+  });
+
+  const total=boxes.length;
+
+  const percent=total
+    ? Math.round((completed/total)*100)
+    : 0;
+
+  document.getElementById('topicCount').textContent =
+    completed+' / '+total;
+
+  document.getElementById('topicBar').style.width =
+    percent+'%';
+
+  document.getElementById('progressPageBar').style.width =
+    percent+'%';
+
+  document.getElementById('progressPageText').textContent =
+    percent+'%';
+
+  for(let u=1;u<=5;u++){
+
+    const unitBoxes=
+      document.querySelectorAll(
+        '.topic input[data-unit="'+u+'"]'
+      );
+
+    let done=0;
+
+    unitBoxes.forEach(box=>{
+      if(box.checked) done++;
+    });
+
+    document.getElementById(
+      'u'+u+'progress'
+    ).textContent =
+      done+' / '+unitBoxes.length;
+  }
+
+  saveProgress();
+}
+
+
+document.querySelectorAll('.topic input')
+.forEach(box=>{
+  box.addEventListener('change',updateProgress);
+});
+
+
+function searchTopics(){
+
+  const search=
+    document.getElementById('syllabusSearch')
+      .value
+      .toLowerCase();
+
+  document.querySelectorAll('.topic')
+  .forEach(topic=>{
+
+    const text=
+      topic.innerText.toLowerCase();
+
+    topic.style.display=
+      text.includes(search)
+      ? 'flex'
+      : 'none';
+  });
+}
+
+
+loadProgress();
+updateProgress();
+
+</script>
+
+</body>
+</html>
